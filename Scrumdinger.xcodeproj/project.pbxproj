@@ -134,6 +134,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 285879CF2872C536008F0C10 /* Build configuration list for PBXNativeTarget "Scrumdinger" */;
 			buildPhases = (
+				28632C1A2872D9E400F07F80 /* Run Script For SwiftFormat */,
 				285879A72872C532008F0C10 /* Sources */,
 				285879A82872C532008F0C10 /* Frameworks */,
 				285879A92872C532008F0C10 /* Resources */,
@@ -251,6 +252,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28632C1A2872D9E400F07F80 /* Run Script For SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script For SwiftFormat";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		285879A72872C532008F0C10 /* Sources */ = {
