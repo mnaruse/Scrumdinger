@@ -44,4 +44,9 @@ enum Theme: String {
     var mainColor: Color {
         return Color(rawValue)
     }
+
+    /// 名前（文字の先頭のみ大文字）
+    var name: String {
+        return rawValue.capitalized
+    }
 }
