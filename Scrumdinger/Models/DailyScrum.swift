@@ -33,6 +33,8 @@ struct DailyScrum: Identifiable {
 // MARK: - Extension DailyScrum
 
 extension DailyScrum {
+    // MARK: Structs
+
     struct Attendee: Identifiable {
         var id: UUID
         var name: String
@@ -44,6 +46,19 @@ extension DailyScrum {
             self.id = id
             self.name = name
         }
+    }
+
+    struct Data {
+        var title: String = ""
+        var attendees: [Attendee] = []
+        var lengthInMinutes: Double = 5
+        var theme: Theme = .seafoam
+    }
+
+    // MARK: Computed Properties
+
+    var data: Data {
+        return Data(title: title, attendees: attendees, lengthInMinutes: Double(lengthInMinutes), theme: theme)
     }
 }
 
