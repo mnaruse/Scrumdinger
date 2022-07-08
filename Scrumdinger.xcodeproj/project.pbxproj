@@ -22,6 +22,7 @@
 		28632C2728743ECB00F07F80 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28632C2628743ECB00F07F80 /* DetailView.swift */; };
 		28632C2928770CB000F07F80 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28632C2828770CB000F07F80 /* DetailEditView.swift */; };
 		28632C2B287842A300F07F80 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28632C2A287842A300F07F80 /* ThemeView.swift */; };
+		28632C2D2878478E00F07F80 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28632C2C2878478E00F07F80 /* ThemePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		28632C2628743ECB00F07F80 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		28632C2828770CB000F07F80 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 		28632C2A287842A300F07F80 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		28632C2C2878478E00F07F80 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				285879B02872C532008F0C10 /* MeetingView.swift */,
 				285879AE2872C532008F0C10 /* ScrumdingerApp.swift */,
 				28632C2428742FF300F07F80 /* ScrumsView.swift */,
+				28632C2C2878478E00F07F80 /* ThemePicker.swift */,
 				28632C2A287842A300F07F80 /* ThemeView.swift */,
 				28632C222874270A00F07F80 /* TrailingIconLabelStyle.swift */,
 				285879B22872C535008F0C10 /* Assets.xcassets */,
@@ -311,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28632C2D2878478E00F07F80 /* ThemePicker.swift in Sources */,
 				28632C1F2873F59700F07F80 /* DailyScrum.swift in Sources */,
 				28632C2728743ECB00F07F80 /* DetailView.swift in Sources */,
 				28632C2928770CB000F07F80 /* DetailEditView.swift in Sources */,

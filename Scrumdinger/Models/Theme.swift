@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// カラーテーマ
-enum Theme: String {
+enum Theme: String, CaseIterable, Identifiable {
     case bubblegum
     case buttercup
     case indigo
@@ -48,5 +48,9 @@ enum Theme: String {
     /// 名前（文字の先頭のみ大文字）
     var name: String {
         return rawValue.capitalized
+    }
+
+    var id: String {
+        return name
     }
 }
