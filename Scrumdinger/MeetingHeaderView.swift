@@ -42,6 +42,7 @@ struct MeetingHeaderView: View {
                     Text("Seconds Elapsed")
                         .font(.caption)
                     Label("\(secondsElapsed)", systemImage: "hourglass.bottomhalf.fill")
+                        .font(.body.monospacedDigit())
                 }
                 Spacer()
                 VStack(alignment: .trailing) {
@@ -49,6 +50,7 @@ struct MeetingHeaderView: View {
                         .font(.caption)
                     Label("\(secondsRemaining)", systemImage: "hourglass.tophalf.fill")
                         .labelStyle(.trailingIcon)
+                        .font(.body.monospacedDigit())
                 }
             }
             .accessibilityElement(children: .ignore)

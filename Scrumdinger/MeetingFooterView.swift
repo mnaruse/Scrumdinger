@@ -46,6 +46,7 @@ struct MeetingFooterView: View {
                     Text("Last Speaker")
                 } else {
                     Text(speakerText)
+                        .font(.body.monospacedDigit())
                     Spacer()
                     Button(action: skipAction) {
                         Image(systemName: "forward.fill")
