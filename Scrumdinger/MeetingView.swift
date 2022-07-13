@@ -5,11 +5,22 @@
 //  Created by MiharuNaruse on 2022/07/04.
 //
 
+import AVFoundation
 import SwiftUI
 
 struct MeetingView: View {
+    // MARK: Internal Stored Properties
+
     @Binding var scrum: DailyScrum
     @StateObject var scrumTimer = ScrumTimer()
+
+    // MARK: Private Computed Properties
+
+    private var player: AVPlayer {
+        AVPlayer.sharedDingPlayer
+    }
+
+    // MARK: Body
 
     var body: some View {
         ZStack {
@@ -26,6 +37,11 @@ struct MeetingView: View {
         .foregroundColor(scrum.theme.accentColor)
         .onAppear {
             scrumTimer.reset(lengthInMinutes: scrum.lengthInMinutes, attendees: scrum.attendees)
+            scrumTimer.speakerChangedAction = {
+                // オーディオファイルが常に最初から開始されるように設定する。
+                player.seek(to: .zero)
+                player.play()
+            }
             scrumTimer.startScrum()
         }
         .onDisappear {
