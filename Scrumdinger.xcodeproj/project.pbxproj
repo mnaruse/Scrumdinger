@@ -14,6 +14,7 @@
 		285879C02872C536008F0C10 /* ScrumdingerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285879BF2872C536008F0C10 /* ScrumdingerTests.swift */; };
 		285879CA2872C536008F0C10 /* ScrumdingerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285879C92872C536008F0C10 /* ScrumdingerUITests.swift */; };
 		285879CC2872C536008F0C10 /* ScrumdingerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285879CB2872C536008F0C10 /* ScrumdingerUITestsLaunchTests.swift */; };
+		2862831C2888C2B600B96587 /* ScrumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2862831B2888C2B600B96587 /* ScrumStore.swift */; };
 		28632C1D2873EDC100F07F80 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28632C1C2873EDC100F07F80 /* Theme.swift */; };
 		28632C1F2873F59700F07F80 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28632C1E2873F59700F07F80 /* DailyScrum.swift */; };
 		28632C212873F6F400F07F80 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28632C202873F6F400F07F80 /* CardView.swift */; };
@@ -60,6 +61,7 @@
 		285879C52872C536008F0C10 /* ScrumdingerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrumdingerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		285879C92872C536008F0C10 /* ScrumdingerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumdingerUITests.swift; sourceTree = "<group>"; };
 		285879CB2872C536008F0C10 /* ScrumdingerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumdingerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2862831B2888C2B600B96587 /* ScrumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumStore.swift; sourceTree = "<group>"; };
 		28632C1C2873EDC100F07F80 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		28632C1E2873F59700F07F80 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		28632C202873F6F400F07F80 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				28632C36287EC10700F07F80 /* AVPlayer+Ding.swift */,
 				28632C1E2873F59700F07F80 /* DailyScrum.swift */,
 				28632CBE288816EF00F07F80 /* History.swift */,
+				2862831B2888C2B600B96587 /* ScrumStore.swift */,
 				28632C32287E4C5800F07F80 /* ScrumTimer.swift */,
 				28632C1C2873EDC100F07F80 /* Theme.swift */,
 			);
@@ -348,6 +351,7 @@
 				28632C2D2878478E00F07F80 /* ThemePicker.swift in Sources */,
 				28632C31287E499D00F07F80 /* ScrumProgressViewStyle.swift in Sources */,
 				28632C35287EA53000F07F80 /* MeetingFooterView.swift in Sources */,
+				2862831C2888C2B600B96587 /* ScrumStore.swift in Sources */,
 				28632C33287E4C5800F07F80 /* ScrumTimer.swift in Sources */,
 				28632C1F2873F59700F07F80 /* DailyScrum.swift in Sources */,
 				28632C2728743ECB00F07F80 /* DetailView.swift in Sources */,
