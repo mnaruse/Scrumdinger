@@ -61,6 +61,16 @@ extension DailyScrum {
         return Data(title: title, attendees: attendees, lengthInMinutes: Double(lengthInMinutes), theme: theme)
     }
 
+    // MARK: Initializers
+
+    init(data: Data) {
+        id = UUID()
+        title = data.title
+        attendees = data.attendees
+        lengthInMinutes = Int(data.lengthInMinutes)
+        theme = data.theme
+    }
+
     // MARK: Functions
 
     mutating func update(from data: Data) {
