@@ -54,6 +54,20 @@ class ScrumStore: ObservableObject {
         }
     }
 
+    @discardableResult
+    static func save(scrums: [DailyScrum]) async throws -> Int {
+        try await withCheckedThrowingContinuation { continuation in
+            save(scrums: scrums) { result in
+                switch result {
+                case let .failure(error):
+                    continuation.resume(throwing: error)
+                case let .success(scrumsSaved):
+                    continuation.resume(returning: scrumsSaved)
+                }
+            }
+        }
+    }
+
     /// デイリースクラムの配列をエンコードし、ファイルに書き込むという長時間実行されるタスクを、バックグラウンドキューで実行する。これらのタスクが完了したら、メインキューに戻す。
     /// - Parameters:
     ///   - scrums: スクラムの配列
