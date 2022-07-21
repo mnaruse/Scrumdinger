@@ -41,6 +41,29 @@ class ScrumStore: ObservableObject {
         }
     }
 
+    /// デイリースクラムの配列をエンコードし、ファイルに書き込むという長時間実行されるタスクを、バックグラウンドキューで実行する。これらのタスクが完了したら、メインキューに戻す。
+    /// - Parameters:
+    ///   - scrums: スクラムの配列
+    ///   - completion: 完了ハンドラ
+    ///     - `success` : デイリースクラムの個数
+    ///     - `failure` : エラー
+    static func save(scrums: [DailyScrum], completion: @escaping (Result<Int, Error>) -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            do {
+                let data = try JSONEncoder().encode(scrums)
+                let outfile = try fileURL()
+                try data.write(to: outfile)
+                DispatchQueue.main.async {
+                    completion(.success(scrums.count))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+
     // MARK: Private Static Functions
 
     private static func fileURL() throws -> URL {
