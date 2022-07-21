@@ -15,6 +15,19 @@ class ScrumStore: ObservableObject {
 
     // MARK: Internal Static Functions
 
+    static func load() async throws -> [DailyScrum] {
+        try await withCheckedThrowingContinuation { continuation in
+            load { result in
+                switch result {
+                case let .failure(error):
+                    continuation.resume(throwing: error)
+                case let .success(scrums):
+                    continuation.resume(returning: scrums)
+                }
+            }
+        }
+    }
+
     /// ファイルを開き、その内容をデコードするという長時間実行されるタスクを、バックグラウンドキューで実行する。これらのタスクが完了したら、メインキューに戻す。
     /// - Parameter completion: 完了ハンドラ
     static func load(completion: @escaping (Result<[DailyScrum], Error>) -> Void) {
