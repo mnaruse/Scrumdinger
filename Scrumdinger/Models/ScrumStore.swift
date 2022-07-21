@@ -13,6 +13,34 @@ class ScrumStore: ObservableObject {
 
     @Published var scrums: [DailyScrum] = []
 
+    // MARK: Internal Static Functions
+
+    /// ファイルを開き、その内容をデコードするという長時間実行されるタスクを、バックグラウンドキューで実行する。これらのタスクが完了したら、メインキューに戻す。
+    /// - Parameter completion: 完了ハンドラ
+    static func load(completion: @escaping (Result<[DailyScrum], Error>) -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            // FIFOキュー。バックグラウンドタスクは全てのタスクの中で最も優先度が低い。
+            do {
+                let fileURL = try fileURL()
+                guard let file = try? FileHandle(forReadingFrom: fileURL) else {
+                    // ユーザーがアプリを初めて起動した場合は、 `scrums.data` が存在しないため、空の配列で完了ハンドラを渡す。
+                    DispatchQueue.main.async {
+                        completion(.success([]))
+                    }
+                    return
+                }
+                let dailyScrums = try JSONDecoder().decode([DailyScrum].self, from: file.availableData)
+                DispatchQueue.main.async {
+                    completion(.success(dailyScrums))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+
     // MARK: Private Static Functions
 
     private static func fileURL() throws -> URL {
