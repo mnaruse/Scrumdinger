@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ScrumsView: View {
+    // MARK: Internal Stored Properties
+
     @Binding var scrums: [DailyScrum]
-    @Environment(\.scenePhase) private var scenePhase
-    @State var newScrumData = DailyScrum.Data()
-    @State private var isPresentingNewScrumView = false
     let saveAction: () -> Void
+
+    // MARK: Private Stored Properties
+
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var newScrumData = DailyScrum.Data()
+    @State private var isPresentingNewScrumView = false
+
+    // MARK: Body
 
     var body: some View {
         List {

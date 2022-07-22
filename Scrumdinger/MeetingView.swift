@@ -12,7 +12,10 @@ struct MeetingView: View {
     // MARK: Internal Stored Properties
 
     @Binding var scrum: DailyScrum
-    @StateObject var scrumTimer = ScrumTimer()
+
+    // MARK: Private Stored Properties
+
+    @StateObject private var scrumTimer = ScrumTimer()
 
     // MARK: Private Computed Properties
 
