@@ -35,6 +35,7 @@
 		28632C37287EC10700F07F80 /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28632C36287EC10700F07F80 /* AVPlayer+Ding.swift */; };
 		28632C3A287EC1EE00F07F80 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 28632C39287EC1EE00F07F80 /* ding.wav */; };
 		28632CBF288816F000F07F80 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28632CBE288816EF00F07F80 /* History.swift */; };
+		46399954289DE66800F9CB84 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399953289DE66800F9CB84 /* SpeechRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		28632C36287EC10700F07F80 /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		28632C39287EC1EE00F07F80 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
 		28632CBE288816EF00F07F80 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		46399953289DE66800F9CB84 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				28632CBE288816EF00F07F80 /* History.swift */,
 				2862831B2888C2B600B96587 /* ScrumStore.swift */,
 				28632C32287E4C5800F07F80 /* ScrumTimer.swift */,
+				46399953289DE66800F9CB84 /* SpeechRecognizer.swift */,
 				28632C1C2873EDC100F07F80 /* Theme.swift */,
 			);
 			path = Models;
@@ -375,6 +378,7 @@
 				28632C2528742FF300F07F80 /* ScrumsView.swift in Sources */,
 				28632C232874270A00F07F80 /* TrailingIconLabelStyle.swift in Sources */,
 				28632C1D2873EDC100F07F80 /* Theme.swift in Sources */,
+				46399954289DE66800F9CB84 /* SpeechRecognizer.swift in Sources */,
 				285879B12872C532008F0C10 /* MeetingView.swift in Sources */,
 				2862832028897E8E00B96587 /* ErrorView.swift in Sources */,
 				285879AF2872C532008F0C10 /* ScrumdingerApp.swift in Sources */,
