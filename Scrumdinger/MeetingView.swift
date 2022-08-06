@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MeetingView.swift
 //  Scrumdinger
 //
 //  Created by MiharuNaruse on 2022/07/04.
