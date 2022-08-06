@@ -16,6 +16,8 @@ struct MeetingView: View {
     // MARK: Private Stored Properties
 
     @StateObject private var scrumTimer = ScrumTimer()
+    @StateObject private var speechRecoginizer = SpeechRecognizer()
+    @State private var isRecording = false
 
     // MARK: Private Computed Properties
 
@@ -44,10 +46,20 @@ struct MeetingView: View {
                 player.seek(to: .zero)
                 player.play()
             }
+            // 音声認識エンジンをリセットして、文字起こしを開始する。
+            speechRecoginizer.reset()
+            speechRecoginizer.transcribe()
+            isRecording = true
+            // スクラムタイマーを開始する。
             scrumTimer.startScrum()
         }
         .onDisappear {
+            // スクラムタイマーを停止する。
             scrumTimer.stopScrum()
+            // 文字起こしを停止する。
+            speechRecoginizer.stopTranscribing()
+            isRecording = false
+            // スクラムの履歴を追加する。
             let newHistory = History(attendees: scrum.attendees, lengthInMinutes: scrum.timer.secondsElapsed / 60)
             scrum.history.insert(newHistory, at: 0)
         }
