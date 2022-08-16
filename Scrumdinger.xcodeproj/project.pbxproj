@@ -36,6 +36,7 @@
 		28632C3A287EC1EE00F07F80 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 28632C39287EC1EE00F07F80 /* ding.wav */; };
 		28632CBF288816F000F07F80 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28632CBE288816EF00F07F80 /* History.swift */; };
 		46399954289DE66800F9CB84 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46399953289DE66800F9CB84 /* SpeechRecognizer.swift */; };
+		4694E5A728AB106300C4C176 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694E5A628AB106300C4C176 /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		28632C39287EC1EE00F07F80 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
 		28632CBE288816EF00F07F80 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		46399953289DE66800F9CB84 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		4694E5A628AB106300C4C176 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +286,7 @@
 				46399955289DF18300F9CB84 /* MeetingView */,
 				4639995A289DF2FD00F9CB84 /* DetailEditView */,
 				28632C2628743ECB00F07F80 /* DetailView.swift */,
+				4694E5A628AB106300C4C176 /* HistoryView.swift */,
 				2862831F28897E8E00B96587 /* ErrorView.swift */,
 			);
 			path = Views;
@@ -443,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28632CBF288816F000F07F80 /* History.swift in Sources */,
+				4694E5A728AB106300C4C176 /* HistoryView.swift in Sources */,
 				28632C2D2878478E00F07F80 /* ThemePicker.swift in Sources */,
 				28632C31287E499D00F07F80 /* ScrumProgressViewStyle.swift in Sources */,
 				28632C35287EA53000F07F80 /* MeetingFooterView.swift in Sources */,

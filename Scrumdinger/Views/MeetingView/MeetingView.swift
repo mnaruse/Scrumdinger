@@ -60,7 +60,7 @@ struct MeetingView: View {
             speechRecoginizer.stopTranscribing()
             isRecording = false
             // スクラムの履歴を追加する。
-            let newHistory = History(attendees: scrum.attendees, lengthInMinutes: scrum.timer.secondsElapsed / 60)
+            let newHistory = History(attendees: scrum.attendees, lengthInMinutes: scrum.timer.secondsElapsed / 60, transcript: speechRecoginizer.transcript)
             scrum.history.insert(newHistory, at: 0)
         }
         .navigationBarTitleDisplayMode(.inline)
